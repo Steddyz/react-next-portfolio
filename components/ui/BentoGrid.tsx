@@ -46,7 +46,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 relative overflow-hidden rounded-3xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none ",
+        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 relative overflow-hidden rounded-3xl  transition duration-200 hover:shadow-xl  dark:shadow-none border border-white/[0.1]",
         className
       )}
       style={{
@@ -95,8 +95,36 @@ export const BentoGridItem = ({
           <div className="font-sans lg:text-3xl text-lg font-bold max-w-96 z-10">
             {title}
           </div>
+
+          {id === 2 && <GlobeDemo />}
+
+          {id === 3 && (
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+              <div className="flex flex-col gap-3 lg:gap-8">
+                {["Jest.js", "Typescript", "Next.js"].map((item) => (
+                  <span
+                    className="text-center py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 rounded-lg lg:opacity-100 bg-[#10132E]"
+                    key={item}
+                  >
+                    {item}
+                  </span>
+                ))}
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]" />
+              </div>
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]" />
+                {["Axios", "Redux", "React.js"].map((item) => (
+                  <span
+                    className="text-center py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 rounded-lg lg:opacity-100 bg-[#10132E]"
+                    key={item}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
-        {id === 2 && <GlobeDemo />}
       </div>
     </div>
   );
