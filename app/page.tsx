@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import { FaHome } from "react-icons/fa";
 import { FloatingNav } from "@/components/ui/FlootingNav";
 import Grid from "@/components/Grid";
+import RecentProjects from "@/components/RecentProjects";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         />
         <Hero />
         <Grid />
+        <RecentProjects />
       </div>
     </main>
   );
