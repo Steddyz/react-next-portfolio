@@ -9,6 +9,7 @@ import { navItems } from "@/data";
 import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
 import Approach from "@/components/Approach";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         <Clients />
         <Experience />
         <Approach />
+        <Footer />
       </div>
     </main>
   );
